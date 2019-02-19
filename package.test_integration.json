@@ -1,0 +1,46 @@
+{
+  "name": "Flux",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "node node_modules/jest/bin/jest.js"
+  },
+  "dependencies": {
+    "react-native": "0.58.3",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "24.0.0",
+    "jest": "24.0.0",
+    "react-test-renderer": "16.6.3",
+    "wd": "^1.11.1"
+  },
+  "devDependencies": {
+
+  },
+  "jest": {
+    "preset": "react-native",
+    "setupFilesAfterEnv": [
+
+    ],
+    "automock": false,
+    "transformIgnorePatterns": [
+      "node_modules/(?!react-native|native-base|native-base-shoutem-theme|@shoutem/animation|@shoutem/ui|tcomb-form-native|styled-components|victory-.*)"
+    ],
+    "moduleNameMapper": {
+      "styled-components": "<rootDir>/node_modules/styled-components/native/dist/styled-components.native.cjs.js"
+    },
+    "haste": {
+      "defaultPlatform": "android",
+      "platforms": [
+        "android",
+        "ios",
+        "native"
+      ],
+      "hasteImplModulePath": "<rootDir>/node_modules/react-native/jest/hasteImpl.js",
+      "providesModuleNodeModules": [
+        "react-native"
+      ]
+    },
+    "timers": "fake"
+  }
+}
